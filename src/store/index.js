@@ -38,7 +38,7 @@ export default createStore({
           throw error
         })
     },
-    fetchEvent({ commit }, id) {  
+    fetchEvent({ commit, state }, id) {
       const event = state.events.find(event => event.id === id)
       if (event) {
         commit('SET_EVENT', event)
